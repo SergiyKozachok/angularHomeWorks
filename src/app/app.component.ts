@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 interface IImages {
-  [index: number]: {id: number; title: string; url: string};
+  id: number; title: string; url: string;
 }
 
 
@@ -11,7 +11,7 @@ interface IImages {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  images: IImages  = [
+  images: IImages[]  = [
     {
       id: 1,
       title: 'accusamus beatae ad facilis cum similique qui sunt',
