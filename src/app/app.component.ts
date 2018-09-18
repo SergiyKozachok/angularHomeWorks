@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { MatCard } from '@angular/material';
+
+interface IImages {
+  [index: number]: {id: number; title: string; url: string};
+}
 
 
 @Component({
@@ -8,9 +11,7 @@ import { MatCard } from '@angular/material';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-
-  images  = [
+  images: IImages  = [
     {
       id: 1,
       title: 'accusamus beatae ad facilis cum similique qui sunt',
