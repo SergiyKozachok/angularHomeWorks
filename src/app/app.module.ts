@@ -6,12 +6,17 @@ import { MatCardModule, MatButtonModule, MatCheckboxModule, MatIconModule, MatTo
   MatInputModule } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GalleryItemComponent } from './gallery-item/gallery-item.component';
+import {GalleryContainerComponent} from './gallery/gallery.component';
+
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GalleryItemComponent,
+    GalleryContainerComponent
   ],
   imports: [
     BrowserModule,
