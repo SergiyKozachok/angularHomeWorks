@@ -4,11 +4,18 @@ import {Image} from '../image';
 
 @Component({
   selector: 'app-gallery-container',
-  template: '<app-gallery-item *ngFor="let image of images" [image]="image">\
-        </app-gallery-item>',
+  templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryContainerComponent  {
   @Input()
   images: Image[];
+
+  onDeleteImage(index: number) {
+    for (let i = 0; i < this.images.length; i++) {
+      if (this.images[i].id === index) {
+        this.images.splice(i, 1);
+      }
+    }
+  }
 }

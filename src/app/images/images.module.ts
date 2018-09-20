@@ -1,22 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { AppComponent } from './app.component';
+
+import { GalleryItemComponent } from '../gallery-item/gallery-item.component';
+import {GalleryContainerComponent} from '../gallery/gallery.component';
+
 import { MatCardModule, MatButtonModule, MatCheckboxModule, MatIconModule, MatToolbarModule, MatFormFieldModule,
   MatInputModule } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ImagesModule } from './images/images.module';
-
-
-
 
 @NgModule({
   declarations: [
-    AppComponent,
+    GalleryItemComponent,
+    GalleryContainerComponent,
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     MatButtonModule,
     MatCheckboxModule,
     MatCardModule,
@@ -25,9 +25,10 @@ import { ImagesModule } from './images/images.module';
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
-    ImagesModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports: [
+    GalleryItemComponent,
+    GalleryContainerComponent
+  ],
 })
-export class AppModule { }
+export class ImagesModule { }
