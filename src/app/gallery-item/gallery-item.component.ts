@@ -11,7 +11,6 @@ import {Image} from '../Image';
 export class GalleryItemComponent implements OnInit {
   @Input()
   image: Image;
-
   @Output() onDelete: EventEmitter<void> = new EventEmitter();
 
   public deleteImage() {

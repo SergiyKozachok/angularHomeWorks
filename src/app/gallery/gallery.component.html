@@ -1,2 +1,27 @@
+<form #addImageForm="ngForm" (ngSubmit)="onAddedImage(addImageForm)">
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput
+             [(ngModel)]="imagesTitle"
+             name="imagesTitle"
+             placeholder="Image title"
+             #title
+             [required]="isRequired">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+             [(ngModel)]="imagesUrl"
+             name="imagesUrl"
+             pattern="https?://.+"
+             placeholder="Image url"
+             #url
+             [required]="isRequired">
+    </mat-form-field>
+    <button mat-button [disabled]="addImageForm.invalid">Add image</button>
+  </div>
+</form>
+
+
 <app-gallery-item *ngFor="let image of images" [image]="image" (onDelete)="onDeleteImage(image.id)">
 </app-gallery-item>

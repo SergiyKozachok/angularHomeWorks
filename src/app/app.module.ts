@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MatCardModule, MatButtonModule, MatCheckboxModule, MatIconModule, MatToolbarModule, MatFormFieldModule,
@@ -25,7 +26,8 @@ import { ImagesModule } from './images/images.module';
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
-    ImagesModule
+    ImagesModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
