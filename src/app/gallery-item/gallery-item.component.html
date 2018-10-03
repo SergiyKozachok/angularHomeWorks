@@ -1,0 +1,7 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{image.title}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="image.url">
+  <button mat-button (click)="deleteImage()">DELETE</button>
+</mat-card>

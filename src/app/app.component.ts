@@ -1,9 +1,5 @@
-import { Component } from '@angular/core';
-
-interface IImages {
-  id: number; title: string; url: string;
-}
-
+import { Component, Input } from '@angular/core';
+import {Image} from './Image';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +7,7 @@ interface IImages {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  images: IImages[]  = [
+  images: Image[]  = [
     {
       id: 1,
       title: 'accusamus beatae ad facilis cum similique qui sunt',
@@ -19,8 +15,8 @@ export class AppComponent {
     },
     {
       id: 2,
-      title: 'reprehenderit est deserunt velit ipsam',
-      url: 'https://placekitten.com/200/202',
+      title: 'accusamus beatae ad facilis cum similique qui sunt',
+      url: 'https://placekitten.com/200/190',
     },
     {
       id: 3,
@@ -63,5 +59,4 @@ export class AppComponent {
       url: 'https://placekitten.com/200/200',
     }
   ];
-
 }
